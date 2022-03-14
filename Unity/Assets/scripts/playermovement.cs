@@ -6,7 +6,6 @@ public class playermovement : MonoBehaviour
     public int fforce=2500;
     public int sideforce;
     public Transform pos;
-    public Vector3 NullVelocity;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -27,7 +26,6 @@ public class playermovement : MonoBehaviour
         if(pos.position.y<-1)
         {
             FindObjectOfType<GameManager>().EndGame();
-            rb.velocity = NullVelocity;
         }
     }
     
